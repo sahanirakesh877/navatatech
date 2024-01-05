@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --primary: #A01F62;
+  --sec:#FBB016;
+}
+
+
+
+nav a:hover {
+    border-bottom: 2px solid var(--primary);
+    transition: 0.1s;
+}
+nav a {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.title-font:hover {
+    border-bottom: 2px solid yellow;
+    transition: 1000;
+    width: 120px; /* Change the color as needed */
+}
+
+
+/* ----- Footer ---- */
+
+/* Home Section Start */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://img.freepik.com/premium-vector/abstract-circuit-lines-futuristic-technology-digital-hi-tech-background-vector-illustration_115579-1746.jpg?w=996');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .content {
+    text-align: center;
+}
+.home .content h5 {
+    color: white;
+    font-size: 30px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+.home .content h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.changecontent::after {
+    content: " ";
+    color: var(--primary);
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext {
+    0% {
+        content: "Web Design";
+    }
+    10% {
+        content: "Web Development";
+    }
+    20% {
+        content: " Graphics Design";
+    }
+    30% {
+        content: "Software Development";
+    }
+    40% {
+        content: "App Development";
+    }
+    50% {
+        content: "Cyber Security";
+    }
+    60% {
+        content: "Block Chain";
+    }
+    70% {
+        content: "Digital Marketing";
+    }
+    80% {
+        content: "Seo Management";
+    }
+    90% {
+        content: "Artificial inteligence";
+    }
+    100% {
+        content: "Interns & Jobs";
+    }
+}
+.home .content p {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .content a {
+    padding: 10px;
+    background: #1A5D1A;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .content a:hover {
+    background: #DF2E38;
+    color: white;
+}
+@media (max-width: 850px) {
+    .home {
+        background-position: 50%;
+    }
+}
+@media (max-width: 450px) {
+    .home .content h5 {
+        font-size: 25px;
+    }
+    .home .content h1 {
+        font-size: 38px;
+    }
+    .home .content p {
+        font-size: 13px;
+    }
+}
+/* Home Section End */
+
+
+.hover-border-b {
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .hover-border-b:hover {
+    border-color:var(#DF2E38); 
+  }
