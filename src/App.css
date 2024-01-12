@@ -38,6 +38,8 @@ nav a {
 }
 
 
+
+
 /* ----- Footer ---- */
 
 /* Home Section Start */
@@ -118,7 +120,7 @@ nav a {
 }
 .home .content a {
     padding: 10px;
-    background: #1A5D1A;
+    background: #FBB016;
     color: white;
     letter-spacing: 2px;
     font-weight: 550;
@@ -127,7 +129,7 @@ nav a {
     transition: 0.5s;
 }
 .home .content a:hover {
-    background: #DF2E38;
+    background: #A01F62;
     color: white;
 }
 @media (max-width: 850px) {

@@ -9,9 +9,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import PageNotFound from "./pages/PageNotFound";
-import SignUp from "./pages/SignUp";
-import LogIn from "./pages/LogIn";
-import Teams from './pages/Teams';
+import Teams from "./pages/Teams";
+import Inquiry from "./pages/Inquiry";
 function App() {
   return (
     <>
@@ -23,8 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/inquiry" element={<Inquiry />} />
+
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
