@@ -3,14 +3,14 @@ import React from 'react'
 const TopSection = () => {
   return (
     <>
-      <section class="bg-primary text-white">
+      <section class="bg-primary text-white  ">
     <div class="container mx-auto py-2 px-5 flex flex-wrap flex-col sm:flex-row ">
     <span class="inline-flex sm:mt-0 mt-2 justify-center sm:justify-start  text-texcol gap-3">
       <p class="flex items-center text-sm">
-        <i class="fa-solid fa-phone  mr-2"></i>984587678
+        <i class="fa-solid fa-phone  mr-2"></i>9704501220
     </p>
     <p class="flex items-center  ">
-        <i class="fa-solid fa-envelope  text-sm mr-2"></i>xyz@gmail.com
+        <i class="fa-solid fa-envelope  text-sm mr-2"></i>technavata@gmail.com
     </p>
                
    </span>

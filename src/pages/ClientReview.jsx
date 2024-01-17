@@ -1,59 +1,44 @@
-import React, { useRef } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
+import clientData from "../Data/ClientData";
 
 const ClientReview = () => {
-  const data = [
-    {
-      img: "https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150061967.jpg?size=626&ext=jpg",
-      name: "Rakesh kumar sahani",
-      para: "Best doctor ever i meet , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, ab!",
-    },
-    
-    {
-      img: "https://img.freepik.com/free-photo/businesman-technological-scene_1134-492.jpg?size=626&ext=jpg",
-      name: "Prakash lama",
-      para: "Best doctor ever i meet , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, ab!",
-    },
-    {
-      img: "https://img.freepik.com/free-photo/teenager-dressed-white-t-shirt-using-virtual-reality-glasses-with-graph-charts-numbers-lines-technology-concept_613910-5157.jpg?size=626&ext=jpg",
-      name: "Supreme court",
-      para: "Best doctor ever i meet , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, ab!",
-    },
-    {
-      img: "https://img.freepik.com/free-photo/technology-netowrking-binary-code-computer-language_53876-124323.jpg?size=626&ext=jpg",
-      name: "Alex",
-      para: "Best doctor ever i meet , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, ab!",
-    },
-    {
-      img: "https://img.freepik.com/free-vector/top-view-dark-laptop-background-template_52683-7081.jpg?size=626&ext=jpg",
-      name: "John Deo",
-      para: "Best doctor ever i meet , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, ab!",
-    },
-    {
-      img: "https://img.freepik.com/free-photo/programming-background-collage_23-2149901785.jpg?size=626&ext=jpg",
-      name: "Rolex",
-      para: "Best doctor ever i meet , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, ab!",
-    },
-  ];
+  // For arrow design purpose
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "purple" }}
+        onClick={onClick}
+      />
+    );
+  }
 
-  const slider = useRef(null);
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
 
   const settings = {
-    accessibility: true,
-
     infinite: true,
     speed: 500,
     autoplay: true,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     responsive: [
       {
-        breakpoint: 1023,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -70,7 +55,7 @@ const ClientReview = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -81,59 +66,53 @@ const ClientReview = () => {
   };
 
   return (
-    <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 ">
-      <div className=" flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
-        <div>
-          <h1 className=" text-4xl font-semibold text-center lg:text-start text-primary">
-           Our Client Reviews
-          </h1>
-          <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
-          </p>
-        </div>
-        <div className="flex gap-5 mt-4 lg:mt-0">
-          <button
-            className=" bg-[#d5f2ec] text-primary px-4 py-2 rounded-lg active:bg-sec"
-            onClick={() => slider.current.slickPrev()}
-          >
-            <FaArrowLeft size={25} />
-          </button>
-          <button
-            className=" bg-[#d5f2ec] text-primary px-4 py-2 rounded-lg active:bg-sec"
-            onClick={() => slider.current.slickNext()}
-          >
-            <FaArrowRight size={25} />
-          </button>
-        </div>
-      </div>
-      <div className=" mt-5   gap-4 ">
-        <Slider ref={slider} {...settings}>
-          {data.map((e, index) => (
-            <div
-              className=" text-black  border-2   rounded-xl py-3 cursor-pointer "
-              key={index}
-            >
-            <div className="flex justify-center items-center flex-col">
-              <div className="w-[130px] h-[130px] overflow-hidden rounded-full flex justify-center items-center ">
-                <img
-                  src={e.img}
-                  alt="img"
-                  className=" h-full object-cover w-full "
-                  style={{ borderRadius: '50%' }}
-                />
-              </div>
+    <>
+      <section className="text-gray-600 body-font">
+        <div className="container  pt-24 mx-auto">
+          <div className="relative ">
+            <h1 className="text-4xl text-center  text-primary font-semibold pb-3">
+              Our Client{" "}
+              <span className="text-secondary hover-border-b">Reviews</span>
+            </h1>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 ">
+              <div className="w-[150px]   h-1 bg-sec"></div>
+            </div>
+          </div>
 
-              <div className=" flex flex-col justify-center items-center">
-                <h1 className=" font-semibold text-xl pt-2">{e.name}</h1>
-                <p className=" pt-1 px-3 text-center">{e.para}</p>
+          <Slider {...settings}>
+            {clientData.map((a, id) => (
+              <div
+                key={id}
+                className="flex flex-wrap  justify-center items-center pt-10 pb-12"
+              >
+                <div className="p-4 w-full">
+                  <div className="h-full bg-gray-100 p-8 rounded">
+                    <p className="leading-relaxed mb-6">
+                      {a.para.substring(0, 250)}....
+                    </p>
+                    <a className="inline-flex items-center">
+                      <img
+                        alt="testimonial"
+                        src={a.img}
+                        className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                      />
+                      <span className="flex-grow flex flex-col pl-4">
+                        <span className="title-font font-medium text-gray-900">
+                          {a.name}
+                        </span>
+                        <span className="text-gray-500 text-sm">
+                          {a.profession}
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
+    </>
   );
 };
 

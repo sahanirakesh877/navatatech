@@ -4,46 +4,41 @@ const Footer = () => {
   return (
     <>
        <footer class=" body-font bg-primary rounded-lg ">
-      <div class="container px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="container px-5 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <a class="flex title-font font-medium items-center text-texcol mb-4 md:mb-0">
-          <img  src="/src/assets/slogan2.png"  class="w-16 h-16 text-white  rounded-full" viewBox="0 0 24 24"/> 
-          </a>
-          <p class="mt-2 text-sm text-sec">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, magnam.</p>
+         <p className='text-white text-xl'>NAVATA <span className=''>TECH</span></p>
+          <p class="mt-2 text-sm text-sec">  With our innovative technology and dedicated team, we strive to elevate your business to new heights. 
+</p>
         </div>
         <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 class="title-font font-medium text-sec tracking-widest text-sm mb-3">QUICK LINKS</h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-white">Admissions</a>
+                <a class="text-white">Home</a>
               </li>
               <li>
-                <a class="text-white">Academics</a>
+                <a class="text-white">Services</a>
               </li>
               <li>
-                <a class="text-white">Campus Life</a>
+                <a class="text-white">About Us</a>
               </li>
-              <li>
-                <a class="text-white">Events</a>
-              </li>
+             
             </nav>
           </div>
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 class="title-font font-medium text-sec tracking-widest text-sm mb-3">DEPARTMENTS</h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-white">Engineering</a>
+                <a class="text-white">Technology</a>
               </li>
               <li>
-                <a class="text-white">Science</a>
+                <a class="text-white">Media Support</a>
               </li>
               <li>
-                <a class="text-white">Business</a>
+                <a class="text-white">Business Deals</a>
               </li>
-              <li>
-                <a class="text-white">Arts</a>
-              </li>
+             
             </nav>
           </div>
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -55,16 +50,14 @@ const Footer = () => {
               <li>
                 <a class="text-white">News & Updates</a>
               </li>
-              <li>
-                <a class="text-white">Alumni Network</a>
-              </li>
+            
               <li>
                 <a class="text-white">Career Opportunities</a>
               </li>
             </nav>
           </div>
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-sec tracking-widest text-sm mb-3">SOCIAL-LINKS</h2>
+            <h2 class="title-font font-medium text-sec tracking-widest text-sm mb-3">FOLLOW US</h2>
             <nav class="list-none mb-10">
               <li>
                 <a class="text-white">FaceBook</a>
@@ -75,9 +68,7 @@ const Footer = () => {
               <li>
                 <a class="text-white">LinkedIn</a>
               </li>
-              <li>
-                <a class="text-white">InstaGram</a>
-              </li>
+             
             </nav>
           </div>
         </div>
@@ -113,9 +104,11 @@ const Footer = () => {
           </span>
         </div>
       </div>
+      
     </footer>
     </>
   )
 }
 
 export default Footer
+
