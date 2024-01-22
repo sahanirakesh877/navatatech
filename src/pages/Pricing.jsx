@@ -48,7 +48,7 @@ const Pricing = () => {
         {pricingPlans.map((plan, index) => (
           <div
             key={index}
-            className={`bg-red-50 p-6 text-primary rounded-md shadow-md  cursor-pointer ${
+            className={`bg-gray-50 p-6 text-primary rounded-md shadow-md  cursor-pointer ${
               selectedPlan === index ? "border border-sec " : ""
             }`}
             onClick={() => handlePlanClick(index)}

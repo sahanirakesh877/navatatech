@@ -97,7 +97,7 @@ const Header = () => {
             </Link>
 
             <Link to="/price" className="mr-5 hover:text-third">
-              Price
+              Pricing
             </Link>
 
             <Link
@@ -181,7 +181,7 @@ const Header = () => {
               dispatch(close());
             }}
           >
-            Price
+            Pricing
           </Link>
 
           <Link
