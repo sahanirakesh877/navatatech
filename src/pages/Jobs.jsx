@@ -3,7 +3,7 @@ import React from "react";
 const Jobs = () => {
   return (
     <>
-    <div className="text-center text-primary py-12">
+    <div className="text-center text-primary py-12 overflow-hidden">
       <p className="text-4xl  font font-semibold inline-block border-b-2 border-sec">Latest Job Vacancy</p>
     </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-12 container mx-auto">
@@ -148,16 +148,16 @@ const Jobs = () => {
                 SEO
                 </span>
                 <span className="m-1 ml-0 inline-block text-yellow-500">
-                  CSS
+                SEM
                 </span>
                 <span className="m-1 ml-0 inline-block text-pink-500">
-                  FIGMA
+                CRO
                 </span>
                 <span className="m-1 ml-0 inline-block text-lime-500">
-                  Ad. XD
+                SMM
                 </span>
-                <span className="m-1 ml-0 inline-block text-blue-500">
-                  Illustrator
+                <span className="m-1 ml-0 inline-block text-blue-500 capitalize">
+                email marketing
                 </span>
               </div>
               <div className="mt-2 text-sm text-gray-700">
@@ -201,19 +201,19 @@ const Jobs = () => {
               </h3>
               <div className="text-sm font-medium">
                 <span className="m-1 ml-0 inline-block text-blue-500">
-                  HTML
+                 DART
                 </span>
                 <span className="m-1 ml-0 inline-block text-yellow-500">
-                  CSS
+                NoSQL 
                 </span>
                 <span className="m-1 ml-0 inline-block text-pink-500">
-                  FIGMA
+                MobX
                 </span>
                 <span className="m-1 ml-0 inline-block text-lime-500">
-                  Ad. XD
+                Riverpod
                 </span>
                 <span className="m-1 ml-0 inline-block text-blue-500">
-                  Illustrator
+                RESTful API
                 </span>
               </div>
               <div className="mt-2 text-sm text-gray-700">

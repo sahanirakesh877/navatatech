@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 const CounterPage = () => {
   return (
     <>
-      <div className="bg-purple-100 ">
+      <div className="bg-purple-100 overflow-hidden ">
         <div className="   py-12 container mx-auto">
           <div className="grid grid-cols-4 text-center ">
             <div>

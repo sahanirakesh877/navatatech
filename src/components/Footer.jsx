@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-       <footer class=" body-font bg-primary rounded-lg ">
+       <footer class=" body-font bg-primary rounded-lg overflow-hidden ">
       <div class="container px-5 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
          <p className='text-white text-xl'>NAVATA <span className=''>TECH</span></p>
@@ -15,13 +15,13 @@ const Footer = () => {
             <h2 class="title-font font-medium text-sec tracking-widest text-sm mb-3">QUICK LINKS</h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-white">Home</a>
+                <Link  to={'/home'} class="text-white">Home</Link>
               </li>
               <li>
-                <a class="text-white">Services</a>
+                <Link to={'/services'} class="text-white">Services</Link>
               </li>
               <li>
-                <a class="text-white">About Us</a>
+                <Link to={'/about'} class="text-white">About Us</Link>
               </li>
              
             </nav>
@@ -30,13 +30,13 @@ const Footer = () => {
             <h2 class="title-font font-medium text-sec tracking-widest text-sm mb-3">DEPARTMENTS</h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-white">Technology</a>
+                <Link class="text-white">Technology</Link>
               </li>
               <li>
-                <a class="text-white">Media Support</a>
+                <Link class="text-white">Media Support</Link>
               </li>
               <li>
-                <a class="text-white">Business Deals</a>
+                <Link class="text-white">Business Deals</Link>
               </li>
              
             </nav>

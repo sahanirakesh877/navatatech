@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import { RiArrowDropDownLine } from "react-icons/ri";
-
 import { close, toggle } from "../redux/features/hamSlice";
+import { FaHome } from "react-icons/fa";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -11,32 +10,15 @@ const Header = () => {
     return state.hamburger.value;
   });
   const location = useLocation();
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowDropdown(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowDropdown(false);
-  };
-
-  const handleLinkClick = () => {
-    setShowDropdown(false);
-  };
 
   // Scroll to the top when the location changes
   useEffect(() => {
     window.scrollTo(0, 0);
-    setShowDropdown(false);
   }, [location.pathname]);
-  const handleMobileDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
 
   return (
     <>
-      <nav className="text-primary bg-white body-font  py-1 sticky top-0 w-full  z-[99] shadow-xl">
+      <nav className="text-primary bg-white body-font  py-1 sticky top-0 w-full  z-[99] shadow-xl  overflow-hidden">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           {/* logo and hamburger menu */}
           <div className="flex items-center">
@@ -50,7 +32,8 @@ const Header = () => {
                 viewbox="0 0 24 24"
                 alt="Logo"
               />
-              NAVATA <span className="text-2xl text-primary ">TECH</span>
+              <span className="text-xl text-primary"> NAVATA </span>
+              <span className="text-xl text-sec ">TECH</span>
             </Link>
           </div>
 
@@ -79,9 +62,14 @@ const Header = () => {
             <Link
               to="/"
               activeClassName="active"
-              className="mr-5 hover:text-third"
+              className="mr-5 hover:text-third "
             >
-              Home
+              <div className="flex justify-center items-center gap-1 ">
+                <span>
+                  <FaHome />
+                </span>
+                Home
+              </div>
             </Link>
             <Link
               to="/about"
@@ -108,51 +96,9 @@ const Header = () => {
               Contact
             </Link>
 
-            <div
-              className={`relative group `}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link
-                to="/pricing"
-                activeClassName="active"
-                className="mr-5 py-6 hover:text-third"
-              >
-                Pricing
-                <RiArrowDropDownLine className="inline-block font-bold text-2xl" />
-              </Link>
-              {showDropdown && (
-                <div
-                  className="absolute z-10  bg-primary text-white mt-6   flex "
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {/* Dropdown content */}
-                  <Link
-                    to="/pricing/web"
-                    className="inline-block border-r-2 border-sec   px-5 py-2 hover:text-third"
-                    onClick={handleLinkClick}
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    to="/pricing/digmarketing"
-                    className="inline-block px-5 py-2 border-r-2 border-sec  hover:text-third"
-                    onClick={handleLinkClick}
-                  >
-                    Digital Marketing
-                  </Link>
-                  <Link
-                    to="/pricing/graphics"
-                    className="inline-block px-5 py-2 hover:text-third"
-                    onClick={handleLinkClick}
-                  >
-                    onClick={() => {}}
-                    Graphics Design
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/price" className="mr-5 hover:text-third">
+              Price
+            </Link>
 
             <Link
               to="/jobs"
@@ -228,49 +174,15 @@ const Header = () => {
           >
             Contact
           </Link>
-
-          <div className={`relative group`} onClick={handleMobileDropdown}>
-            <Link
-              to="/pricing"
-              className="block text-white px-4 py-2 border-b border-sec"
-            >
-              Pricing <RiArrowDropDownLine className="inline-block" />
-            </Link>
-            {showDropdown && (
-              <div className="flex flex-col items-center border-sec py-5 bg-sec ">
-                <Link
-                  to="/pricing/web"
-                  className="block text-white px-4 py-2 border-b border-white"
-                  onClick={() => {
-                    dispatch(close());
-                    handleLinkClick();
-                  }}
-                >
-                  Web Development
-                </Link>
-                <Link
-                  to="/pricing/digmarketing"
-                  className="block text-white px-4 py-2 border-b border-white"
-                  onClick={() => {
-                    dispatch(close());
-                    handleLinkClick();
-                  }}
-                >
-                  Digital Marketing
-                </Link>
-                <Link
-                  to="/pricing/graphics"
-                  className="block text-white px-4 py-2 border-b "
-                  onClick={() => {
-                    dispatch(close());
-                    handleLinkClick();
-                  }}
-                >
-                  Graphics Design
-                </Link>
-              </div>
-            )}
-          </div>
+          <Link
+            to="/price"
+            className="block text-white px-4 py-2 border-b border-sec"
+            onClick={() => {
+              dispatch(close());
+            }}
+          >
+            Price
+          </Link>
 
           <Link
             to="/jobs"

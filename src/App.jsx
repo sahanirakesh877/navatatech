@@ -14,13 +14,11 @@ import Inquiry from "./pages/Inquiry";
 import ServiceDetails from "./pages/ServiceDetails";
 import Jobs from "./pages/Jobs";
 import Pricing from "./pages/Pricing";
-import WebDevelopment from "./pages/pricing/WebDevelopment";
-import Digitalmarketing from "./pages/pricing/Digitalmarketing";
-import GraphicsDesign from "./pages/pricing/GraphicsDesign";
+
 function App() {
   return (
     <>
-      <TopSection />
+      <TopSection/>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -31,10 +29,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/inquiry" element={<Inquiry />} />
         <Route path="/jobs" element={<Jobs />} />
-        <Route path="/pricing" element={<Pricing/>} />
-        <Route path="/pricing/web" element={<WebDevelopment/>} />
-        <Route path="/pricing/digmarketing" element={<Digitalmarketing/>} />
-        <Route path="/pricing/graphics" element={<GraphicsDesign/>} />
+        <Route path="/price" element={<Pricing/>} />
+      
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

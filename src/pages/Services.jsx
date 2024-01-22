@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <>
 
-      <div className="container md:py-[80]  pt-10 mx-auto relative ">
+      <div className="container md:py-[80]  pt-10 mx-auto relative overflow-hidden">
         <h1 className="text-4xl text-center text-primary font-semibold pb-3">
           What We <span className="text-secondary hover-border-b">Build</span>
         </h1>
@@ -16,17 +16,17 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="container mx-auto pb-[100px]   pt-10 grid lg:grid-cols-3 sm:grid-cols-1 sm:px-10 gap-24">
+      <div className="container mx-auto pb-[100px]   pt-10 grid lg:grid-cols-3 sm:grid-cols-1 sm:px-10 gap-24 ">
         {serviceData.map((a, id) => {
           return (
             <>
               <div key={a.id}>
                 <Link to={`/services/${a.id}`}>
-                  <div className="group shadow-lg p-4 text-center hover:bg-primary hover:text-white rounded duration-1000">
+                  <div className="group shadow-xl  p-4 text-center hover:bg-primary hover:text-white rounded duration-1000 bg-gray-50">
                     <i className={a.iconClass} />
-                    <h3 className="text-xl py-2">{a.title}</h3>
+                    <h3 className="text-2xl py-2 text-sec">{a.title}</h3>
                     <p>{a.description.substring(0,160)}. . . .</p>
-                   <p className="py-3 items-center flex gap-2 justify-center text-primary hover:text-sec"> Read More <span><FaArrowRight /></span></p>
+                   <p className="py-3 items-center flex gap-2 justify-center text-primary group hover:text-sec"> Read More <span><FaArrowRight /></span></p>
                   </div>
                 </Link>
               </div>

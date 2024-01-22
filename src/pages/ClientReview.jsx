@@ -67,7 +67,7 @@ const ClientReview = () => {
 
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font overflow-hidden">
         <div className="container  pt-24 mx-auto">
           <div className="relative ">
             <h1 className="text-4xl text-center  text-primary font-semibold pb-3">

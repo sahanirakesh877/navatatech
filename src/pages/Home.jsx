@@ -10,7 +10,7 @@ import CounterPage from "./CounterPage";
 const Home = () => {
   return (
     <>
-      <div class="home  ">
+      <div class="home  overflow-hidden ">
         <div class="content container mx-auto">
           <h5>
             Welcome To Our <span className="text-sec">NAVATA</span> TECH
