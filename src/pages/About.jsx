@@ -30,7 +30,8 @@ const About = () => {
                 </span>
               </h2>
               <p className="text-gray-900 md:text-base lg:text-md lg:ml-6 mb-4">
-                Welcome to <span className="text-primary font-bold">[NAVATA TECH]</span>,
+                Welcome to{" "}
+                <span className="text-primary font-bold">[NAVATA TECH]</span>,
                 where innovation meets technology! We specialize in crafting
                 exceptional digital solutions that redefine your online
                 presence. From cutting-edge web design and custom app
@@ -45,7 +46,7 @@ const About = () => {
                 results. Let's collaborate and propel your business to new
                 heights in the digital landscape.
               </p>
-              <button className="mx-6 relative border-2 border-sec bg-transparent py-2.5 px-5 font-medium uppercase text-gray-800 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-primary before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
+              <button className="mx-6 relative border-2 rounded-tl-xl  rounded-br-xl   border-sec bg-transparent py-2.5 px-5 font-medium uppercase text-gray-800 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-primary before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100">
                 Learn More
               </button>
             </div>

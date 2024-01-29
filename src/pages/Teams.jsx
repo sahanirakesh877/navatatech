@@ -13,7 +13,7 @@ const Teams = () => {
         <div className="max-w-5xl mx-auto">
           <div className="container md:py-[80]   mx-auto relative ">
             <h1 className="text-4xl text-center text-primary font-semibold pb-3">
-              Our
+              Our {''}
               <span className="text-secondary hover-border-b">
                 Creative Team
               </span>

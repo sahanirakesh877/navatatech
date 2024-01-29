@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="text-primary bg-white body-font  py-1 sticky top-0 w-full  z-[99] shadow-xl  overflow-hidden">
+      <nav className="text-primary bg-white body-font topheader py-0.5 sticky top-0 w-full  z-[99] shadow-xl  overflow-hidden ">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           {/* logo and hamburger menu */}
           <div className="flex items-center">
@@ -145,7 +145,7 @@ const Header = () => {
               dispatch(close());
             }}
           >
-            About
+          AboutUs
           </Link>
           <Link
             to="/services"
@@ -209,6 +209,16 @@ const Header = () => {
           </div>
         </div>
       </nav>
+
+
+      <style jsx>{`
+  @media screen and (max-width: 640px) {
+    .topheader{
+      background-color: #F8FAE5;
+      padding:-5px , 0px;
+    }
+  }
+`}</style>
     </>
   );
 };

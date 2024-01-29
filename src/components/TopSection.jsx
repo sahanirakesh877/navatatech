@@ -3,7 +3,7 @@ import React from 'react'
 const TopSection = () => {
   return (
     <>
-     <section class="bg-primary text-white overflow-hidden ">
+     <section class="bg-primary text-white overflow-hidden top ">
   <div class="container mx-auto py-2 px-5 flex flex-wrap flex-col sm:flex-row ">
  
     <span class="inline-flex sm:mt-0 mt-2  justify-center sm:justify-start text-texcol gap-3">
@@ -28,7 +28,7 @@ const TopSection = () => {
 </section>
  <style jsx>{`
         @media screen and (max-width: 640px) {
-          section {
+          .top {
             display: none;
           }
         }
